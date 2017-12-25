@@ -183,6 +183,7 @@ input:checked + .prizes__item{
 		.prizes__item-left{
 			width: auto;
 			display: block;
+			position: static;
 		}
 
 		.prizes__yellow-circle{

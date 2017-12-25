@@ -657,7 +657,8 @@ input:checked + .prizes__item {
     width: auto; }
     input:checked + .prizes__item .prizes__item-left {
       width: auto;
-      display: block; }
+      display: block;
+      position: static; }
     input:checked + .prizes__item .prizes__yellow-circle {
       width: 133px;
       height: 133px; }
