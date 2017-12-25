@@ -1,9 +1,9 @@
 mixin prizes(params)
   .prizes&attributes(attributes)
-  if params
-    each item in params
-      +prizes__item(item)
-  block
+    if params
+      each item in params
+        +prizes__item(item)
+    block
 
 mixin prizes__item(content)
     input(type="radio" name="checked" id=content.index)
