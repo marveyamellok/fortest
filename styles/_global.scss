@@ -1,0 +1,104 @@
+$OfficinaSerifBook: 'OfficinaSerifBook';
+ $OfficinaSerifBold: 'OfficinaSerifBold';
+
+$MOBILE: 640px;
+$TABLET: 768px;
+$DESKTOP: 1080px;
+
+@mixin MOBILE() {
+  @media screen and (max-width: $TABLET - 1) { @content; }
+}
+@mixin TABLET() {
+  @media screen and (min-width: $TABLET) and (max-width: $DESKTOP - 1) { @content; }
+}
+@mixin DESKTOP() {
+  @media screen and (min-width: $DESKTOP) { @content; }
+}
+
+/**
+ * Слово "фото"
+ */
+.PHOTOS_WORD {
+  font-family: $OfficinaSerifBook;
+  @include MOBILE() {
+    font-size: 16px;
+    line-height: 1;
+  }
+  @include TABLET() {
+    font-size: 14.72px;
+    line-height: 1;
+  }
+  @include DESKTOP() {
+    font-size: 12px;
+    line-height: 1;
+  }
+}
+/**
+ * Количество фото
+ */
+.PHOTOS_NAME {
+  font-family: $OfficinaSerifBook;
+  @include MOBILE() {
+    font-size: 27.5px;
+    line-height: 1;
+  }
+  @include TABLET() {
+    font-size: 25.24px;
+    line-height: 1;
+  }
+  @include DESKTOP() {
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+/**
+ * Название приза
+ */
+.PRIZE_NAME {
+  font-family: $OfficinaSerifBold;
+  @include MOBILE() {
+    font-size: 24.5px;
+    line-height: 1.2;
+  }
+  @include TABLET() {
+    font-size: 22.72px;
+    line-height: 1.2;
+  }
+  @include DESKTOP() {
+    font-size: 17.69px;
+    line-height: 1.111;
+  }
+}
+.PHOTOS_WORD_CH {
+  font-family: $OfficinaSerifBook;
+  @include MOBILE() {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  @include DESKTOP() {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+}
+.PHOTOS_NAME_CH {
+  font-family: $OfficinaSerifBook;
+  @include MOBILE() {
+    font-size: 37.5px;
+    line-height: 1.2;
+  }
+  @include DESKTOP() {
+    font-size: 26px ;
+    line-height: 1.2;
+  }
+}
+.PRIZE_NAME_CH {
+  font-family: $OfficinaSerifBold;
+  @include MOBILE() {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  @include DESKTOP() {
+    font-size: 30px;
+    line-height: 1;
+  }
+}

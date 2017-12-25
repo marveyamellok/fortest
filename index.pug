@@ -1,0 +1,14 @@
+include components/prizes/prizes.pug
+include components/info/info.pug
+include components/myplace/myplace.pug
+html
+  head
+    link(rel="stylesheet" type="text/css" href="styles/styles.css" lang="ru")
+    meta( charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    meta(name="format-detection" content="telephone=no")
+  body
+    a(href="index.html") INDEX
+    a(href="simple.html") SIMPLE
+    +prizes( [ {index:"1", num:"150", name:"GoPro"}, {index:"2", num:"200", name:"Iphone"}, {index:"3", num:"300", name:"Galaxy"}, {index:"4", num:"500", name:"Macbook"} ] ).prizes_onmain

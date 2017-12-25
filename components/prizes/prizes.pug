@@ -1,0 +1,21 @@
+mixin prizes(params)
+  .prizes&attributes(attributes)
+  if params
+    each item in params
+      +prizes__item(item)
+  block
+
+mixin prizes__item(content)
+    input(type="radio" name="checked" id=content.index)
+    label.prizes__item(for=content.index)&attributes(attributes)
+      .prizes__item-left
+        .prizes__yellow-circle
+          .prizes__pic
+        .photo-circle
+          .photo-circle__num=content.num
+          .photo-circle__text фото
+        .name=content.name
+      .prizes__info
+        .prizes__info-name=content.name
+        +info
+        +myplace
