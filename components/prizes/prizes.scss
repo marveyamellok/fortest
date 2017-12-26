@@ -2,6 +2,16 @@ input[type='radio']{
 	display: none;
 }
 
+.prizes__pic{
+	position: absolute;
+	top: 10px;
+    left: -18px;
+	width: 146px;
+	height: 86px;
+	background: url('../img/mac.png') no-repeat;
+	background-size: 100% 100%;
+}
+
 /////////////////////////////основной блок///////////////////////////////
 
 .prizes{
@@ -43,7 +53,7 @@ input[type='radio']{
     background: linear-gradient( 90deg, rgb(250,166,39) 0%, rgb(255,225,21) 99%);
     width: 115px;
     height: 114px;
-    margin: 30px 18px 9px 18px;
+    margin: 28px 12px 7px 12px;
 }
 
 .photo-circle{
@@ -92,7 +102,7 @@ input:checked + .prizes__item{
 	height: 316px;
 
 	.prizes__item-left{
-		width: 277px;
+		width: 286px;
 		//float: left;
 		margin-right: 24px;
 
@@ -102,6 +112,7 @@ input:checked + .prizes__item{
 	.prizes__yellow-circle{
 		width: 218px;
 		height: 219px;
+		margin: 49px 12px 22px 43px;
 	}
 
 	.prizes__info{
@@ -115,9 +126,46 @@ input:checked + .prizes__item{
 		vertical-align: middle;
 	}
 
+	.prizes__info-date{
+
+	}
+
+	.prizes__info-date-people{
+
+	}
+
+	.prizes__info-date-dates{
+
+	}
+
+	.myplace{
+
+	}
+	.prizes__info-myplace{
+
+	}
+	.num 5{
+
+	}
+	.prizes__info-renewal{
+
+	}
+
+	.prizes__btn{
+		
+	}
+
 	.photo-circle{
+		top: 6px;
 		width: 102px;
 		height: 104px;
+	}
+
+	.prizes__pic{
+		top: 25px;
+    	left: -28px;
+		width: 283px;
+		height: 166px;
 
 	}
 
@@ -154,6 +202,11 @@ input:checked + .prizes__item{
         outline: 2px solid orange;
 
 
+  	}
+
+  	.prizes__pic{
+  		width: 146px;
+  		height: 86px;
   	}
 
   }
@@ -221,6 +274,10 @@ input:checked + .prizes__item{
 		}
 
 	}
+	.prizes__pic{
+  		width: 89px;
+  		height: 52.5px;
+  	}
 
 }
                                                  

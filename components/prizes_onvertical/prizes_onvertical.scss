@@ -21,12 +21,25 @@
 
   &:hover{
 
-    .prizes__yellow-circle,
-    .photo-circle,
-    .name{
-      transition: transform 0.5s;
-      transform: scale(1.2);
+    @include DESKTOP{
+      .prizes__yellow-circle,
+      .photo-circle,
+      .name{
+        transition: transform 0.5s;
+        transform: scale(1.2);
+      }
     }
+
+    @include TABLET{
+      .prizes__yellow-circle,
+      .photo-circle,
+      .name{
+        transition: transform 0.5s;
+        transform: scale(1.2);     
+    }
+  }
+
+    
   }
 
   }
@@ -61,6 +74,8 @@
   }
 
   .prizes__pic{
+    top: 9px;
+    left: -12px;
     width: 128px;
     height: 74px;
   }
@@ -151,6 +166,8 @@
   }
 
   .prizes__pic{
+    top: 12px;
+    left: -17px;
     width: 164px;
     height: 96px;
   }
@@ -236,6 +253,8 @@
   }
 
   .prizes__pic{
+    top: 6px;
+    left: -7px;
     width: 75.5px;
     height: 44.5px;
   }
