@@ -33,26 +33,31 @@
 			}
 
 			.photo-circle{
+				top:0;
 				width: 57px;
-		  		height: 58px;
+		  	height: 58px;
 			}
 
 			.photo-circle__num{
-		    	top: auto;
-		    	margin-top: 11px;
-		    	transform: none;
-		    }
+	    	top: auto;
+	    	margin-top: 11px;
+	    	transform: none;
+	    	font-size: 20px;
+	    }
 
 	    .photo-circle__text{
 	    	top: auto;
-	    	margin-top: -1px;
+	    	margin-top: -10px;
 	    	transform: none;
+	    	font-size: 12px;
 	    }
 
 	    .prizes__pic{
+	    	top: 10px;
+	    	left: -14px;
 	    	width: 128px;
 	    	height: 74px;
-	    }
+		    }
 
 	    .prizes__info{
 	    	display: none;
@@ -118,28 +123,28 @@
 	}
 
 	.photo-circle__num{
-    	top: auto;
-    	margin-top: 11px;
-    	transform: none;
-    }
+  	top: auto;
+  	margin-top: 11px;
+  	transform: none;
+  }
 
-    .photo-circle__text{
-    	top: auto;
-    	margin-top: -1px;
-    	transform: none;
-    }
+  .photo-circle__text{
+  	top: auto;
+  	margin-top: -10px;
+  	transform: none;
+  }
 
-    .prizes__pic{
-    	top: 10px;
-    	left: -14px;
-    	width: 128px;
-    	height: 74px;
+  .prizes__pic{
+  	top: 10px;
+  	left: -14px;
+  	width: 128px;
+  	height: 74px;
 
-    }
+  }
 
-    .name{
-    	transition: transform 0.5s;
-    }
+  .name{
+  	transition: transform 0.5s;
+  }
 
   /*
 ████████╗ █████╗ ██████╗ ██╗     ███████╗████████╗
@@ -214,7 +219,7 @@
  /*
    ██████╗██╗  ██╗███████╗ ██████╗██╗  ██╗███████╗██████╗ 
   ██╔════╝██║  ██║██╔════╝██╔════╝██║ ██╔╝██╔════╝██╔══██╗
-  ██║     ███████║█████╗  ██║     █████╔╝ █████╗  ██║  ██║////////////////убаны изменения/////////////
+  ██║     ███████║█████╗  ██║     █████╔╝ █████╗  ██║  ██║////////////////убpаны изменения/////////////
   ██║     ██╔══██║██╔══╝  ██║     ██╔═██╗ ██╔══╝  ██║  ██║
   ╚██████╗██║  ██║███████╗╚██████╗██║  ██╗███████╗██████╔╝
    ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═════╝ 
@@ -242,6 +247,7 @@
     	}
 
     	.photo-circle{
+    		top: 0;
 			  width: 62px;
 			  height: 63px;
 			  color: #fdc81c;
@@ -319,6 +325,7 @@
 
 	    &__text{
 	      font-size: 8px;
+	      margin-top: -1px;
 	    }
 
 		}
@@ -373,12 +380,14 @@
 			  height: 35px;
 
 			  &__num{
-		      margin-top: 8px;
+		      margin-top: 6px;
 		      font-size: 14px;
 		    }
 
 		    &__text{
 		      font-size: 8px;
+		      margin-top: -1px;
+		      line-height: 1.3;
 		    }
 
 			}

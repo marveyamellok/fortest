@@ -36,10 +36,8 @@
       .name{
         transition: transform 0.5s;
         transform: scale(1.2);     
-    }
-  }
-
-    
+      }
+    }    
   }
 
   }
@@ -67,6 +65,7 @@
   .photo-circle__text{
     top: auto;
     transform: none;
+    line-height: 1;
   }
   .name{
     margin-right: 10px;
@@ -103,23 +102,37 @@
     .prizes__yellow-circle{
       width: 98px;
       height: 97.5px;
+      margin: 27px 7px 10px;
     }
 
     .photo-circle{
+      top: 0;
       width: 56px;
       height: 57px;
     }
 
     .photo-circle__num{
       transform: none;
+      font-size: 20px;
+      margin-top: 11px;
     }
     .photo-circle__text{
       transform: none;
+      font-size: 12px;
+      line-height: 1;
+
     }
 
 
     .prizes__info{
       display: none;
+    }
+
+    .prizes__pic{
+      top: 9px;
+      left: -12px;
+      width: 128px;
+      height: 74px;
     }
    }
 
@@ -156,11 +169,12 @@
   .photo-circle{
     width: 72px;
     height: 74px;
-
-    &_num{
-      margin-top: 15px;
-    }
   }
+
+  .photo-circle__num{
+    margin-top: 16px;
+  }
+
   .name{
     font-size: 22px;
   }
@@ -195,9 +209,27 @@
       width: 72px;
       height: 74px;
     }
+    .photo-circle__num{
+      margin-top: 16px;
+      font-size: 25.24px;
+    }
+    
+    .photo-circle__text{
+      font-size: 14.72px;
+      line-height: 1;
+
+    }
+
 
     .name{
       font-size: 22px;
+    }
+
+    .prizes__pic{
+      top: 12px;
+      left: -17px;
+      width: 164px;
+      height: 96px;
     }
 
   }
@@ -220,6 +252,7 @@
 
   .prizes__item{
     margin: 0 30px 20px;
+    //outline: 2px solid red;
   }
 
   .prizes__item-left{
@@ -260,9 +293,8 @@
   }
 
   input:checked + .prizes__item{
-    .prizes__item{
+
       margin: 0 30px 20px;
-    }
 
     .prizes__item-left{
       width: 75px;
@@ -280,8 +312,29 @@
       height: 34.5px;
     }
 
+    .photo-circle__num{
+      margin-top: 7px;
+      margin-bottom: 1px;
+      font-size: 12.5px;
+    }
+
+    .photo-circle__text{
+      font-size: 7.25px;
+    }
+
     .prizes__info{
       display: none;
+    }
+
+    .prizes__pic{
+      top: 6px;
+      left: -7px;
+      width: 75.5px;
+      height: 44.5px;
+    }
+    .name{
+      margin-right: 0;
+      font-size: 10.5px;
     }
   }
 }

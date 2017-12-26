@@ -477,26 +477,26 @@ template {
       font-size: 17.69px;
       line-height: 1.111; } }
 
-.PHOTOS_WORD_CH {
+.PHOTOS_WORD_CH, input:checked + .prizes__item .photo-circle__text {
   font-family: "OfficinaSerifBook"; }
   @media screen and (max-width: 767px) {
-    .PHOTOS_WORD_CH {
+    .PHOTOS_WORD_CH, input:checked + .prizes__item .photo-circle__text {
       font-size: 22px;
       line-height: 1.2; } }
   @media screen and (min-width: 1080px) {
-    .PHOTOS_WORD_CH {
-      font-size: 14px;
+    .PHOTOS_WORD_CH, input:checked + .prizes__item .photo-circle__text {
+      font-size: 22px;
       line-height: 1.2; } }
 
-.PHOTOS_NAME_CH {
+.PHOTOS_NAME_CH, input:checked + .prizes__item .photo-circle__num {
   font-family: "OfficinaSerifBook"; }
   @media screen and (max-width: 767px) {
-    .PHOTOS_NAME_CH {
+    .PHOTOS_NAME_CH, input:checked + .prizes__item .photo-circle__num {
       font-size: 37.5px;
       line-height: 1.2; } }
   @media screen and (min-width: 1080px) {
-    .PHOTOS_NAME_CH {
-      font-size: 26px;
+    .PHOTOS_NAME_CH, input:checked + .prizes__item .photo-circle__num {
+      font-size: 38.5px;
       line-height: 1.2; } }
 
 .PRIZE_NAME_CH, input:checked + .prizes__item .prizes__item-left {
@@ -534,16 +534,17 @@ input[type='radio'] {
   margin: auto;
   left: 0;
   right: 0;
-  text-align: center;
-  outline: 2px solid red; }
+  text-align: center; }
 
 .prizes__item {
   position: relative;
   display: inline-block;
   vertical-align: middle;
   width: auto;
-  outline: 2px solid green;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: margin-right 0.5s;
+  -o-transition: margin-right 0.5s;
+  transition: margin-right 0.5s; }
 
 .prizes__item-left {
   position: relative;
@@ -583,9 +584,12 @@ input[type='radio'] {
   position: relative;
   display: block;
   top: 50%;
-  -webkit-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  transform: translateY(-100%); }
+  -webkit-transform: translateY(-86%);
+  -ms-transform: translateY(-86%);
+  transform: translateY(-86%); }
+
+.photo-circle__text {
+  line-height: 2.5; }
 
 .prizes__info {
   opacity: 0;
@@ -608,17 +612,86 @@ input:checked + .prizes__item {
     height: 219px;
     margin: 49px 12px 22px 43px; }
   input:checked + .prizes__item .prizes__info {
+    position: relative;
     display: inline-block;
     margin-right: 66px;
     width: 254px;
+    height: 167px;
     font-size: 100%;
     opacity: 1;
     text-align: left;
-    vertical-align: middle; }
+    vertical-align: middle;
+    font-family: 'OfficinaSerifBook'; }
+  input:checked + .prizes__item .prizes__info-name {
+    position: relative;
+    margin-left: 18px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    font-family: 'OfficinaSerifBold'; }
+    input:checked + .prizes__item .prizes__info-name:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: -20px;
+      width: 0;
+      height: 0;
+      border: 9px solid transparent;
+      border-left: 9px solid #fdc81c; }
+    input:checked + .prizes__item .prizes__info-name:after {
+      position: absolute;
+      content: '';
+      top: 26px;
+      left: -18px;
+      width: 262px;
+      height: 1px;
+      background-color: black; }
+  input:checked + .prizes__item .prizes__info-date {
+    margin-left: 18px; }
+  input:checked + .prizes__item .myplace {
+    position: relative;
+    margin-left: 18px;
+    margin-top: 18px; }
+    input:checked + .prizes__item .myplace:after {
+      position: absolute;
+      content: '';
+      top: 4px;
+      left: 103px;
+      width: 28px;
+      height: 27px;
+      background: url("../img/prize.png") no-repeat; }
+  input:checked + .prizes__item .prizes__info-myplace {
+    margin-bottom: 8px;
+    width: 100px;
+    letter-spacing: 0.9; }
+  input:checked + .prizes__item .num {
+    position: absolute;
+    top: -2px;
+    right: 79px;
+    font-family: 'OfficinaSerifBold';
+    font-size: 36.69px;
+    color: #fdc922; }
+  input:checked + .prizes__item .prizes__info-renewal {
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 0.3; }
+  input:checked + .prizes__item .prizes__btn {
+    display: none; }
   input:checked + .prizes__item .photo-circle {
     top: 6px;
     width: 102px;
     height: 104px; }
+    input:checked + .prizes__item .photo-circle__num {
+      margin-top: 7px;
+      line-height: 1;
+      -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      transform: translateY(-100%); }
+    input:checked + .prizes__item .photo-circle__text {
+      line-height: 2.5;
+      -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      transform: translateY(-100%); }
   input:checked + .prizes__item .prizes__pic {
     top: 25px;
     left: -28px;
@@ -629,28 +702,34 @@ input:checked + .prizes__item {
 
 ████████╗ █████╗ ██████╗ ██╗     ███████╗████████╗
 ╚══██╔══╝██╔══██╗██╔══██╗██║     ██╔════╝╚══██╔══╝
-   ██║   ███████║██████╔╝██║     █████╗     ██║   
-   ██║   ██╔══██║██╔══██╗██║     ██╔══╝     ██║   
-   ██║   ██║  ██║██████╔╝███████╗███████╗   ██║   
-   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝   ╚═╝   
-   */
+	 ██║   ███████║██████╔╝██║     █████╗     ██║   
+	 ██║   ██╔══██║██╔══██╗██║     ██╔══╝     ██║   
+	 ██║   ██║  ██║██████╔╝███████╗███████╗   ██║   
+	 ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝   ╚═╝   
+	 */
 @media screen and (min-width: 768px) and (max-width: 1079px) {
   .prizes__item {
-    margin-top: 316px; }
-  .prizes__info {
-    -webkit-transition: opacity 0.3s;
-    -o-transition: opacity 0.3s;
-    transition: opacity 0.3s;
-    -webkit-transition-delay: 0.3s;
-    -o-transition-delay: 0.3s;
-    transition-delay: 0.3s; }
+    margin-top: 335px;
+    margin-right: 50px; }
   input:checked + .prizes__item {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    margin: auto;
-    outline: 2px solid orange; }
+    margin: auto; }
+    input:checked + .prizes__item .photo-circle__num {
+      font-size: 42.5px; }
+    input:checked + .prizes__item .photo-circle__text {
+      font-size: 24.81px; }
+    input:checked + .prizes__item .prizes__info {
+      opacity: 1;
+      outline: 2px solid red; }
+    input:checked + .prizes__item .prizes__info-myplace,
+    input:checked + .prizes__item .prizes__info-renewal,
+    input:checked + .prizes__item .myplace:after {
+      display: none; }
+    input:checked + .prizes__item .prizes__btn {
+      display: block; }
   .prizes__pic {
     width: 146px;
     height: 86px; } }
@@ -666,7 +745,7 @@ input:checked + .prizes__item {
 */
 @media screen and (max-width: 767px) {
   .prizes {
-    width: 480px; }
+    width: 550px; }
   .prizes__item-left {
     width: auto; }
   .prizes__yellow-circle {
@@ -676,27 +755,76 @@ input:checked + .prizes__item {
   .photo-circle {
     width: 38px;
     height: 38px; }
+    .photo-circle__text {
+      line-height: 1.5; }
   input:checked + .prizes__item {
-    width: auto; }
+    margin-right: 20px;
+    width: auto;
+    height: 202px; }
     input:checked + .prizes__item .prizes__item-left {
       width: auto;
-      display: block;
-      position: static; }
+      position: relative;
+      display: inline-block;
+      margin-right: 0; }
     input:checked + .prizes__item .prizes__yellow-circle {
       width: 133px;
-      height: 133px; }
+      height: 133px;
+      margin: 31px 12px 22px 43px; }
     input:checked + .prizes__item .photo-circle {
       width: 64px;
-      height: 64px; }
+      height: 64px;
+      top: 0; }
+      input:checked + .prizes__item .photo-circle__num {
+        margin-top: 4px;
+        font-size: 23.5px; }
+      input:checked + .prizes__item .photo-circle__text {
+        font-size: 13.5px; }
     input:checked + .prizes__item .prizes__info {
       display: block;
       width: 163px;
-      margin-right: 0; }
+      height: auto;
+      margin-right: 0;
+      margin-left: 21px;
+      font-size: 11px; }
+    input:checked + .prizes__item .prizes__info-name {
+      margin-top: 12px;
+      margin-bottom: 16px; }
+      input:checked + .prizes__item .prizes__info-name:before {
+        top: 1px;
+        left: -12px;
+        border: 5.5px solid transparent;
+        border-left: 7px solid #fdc81c; }
+      input:checked + .prizes__item .prizes__info-name:after {
+        top: 16px;
+        left: -11px;
+        width: 160px; }
     input:checked + .prizes__item .prizes__info-myplace,
     input:checked + .prizes__item .prizes__info-renewal {
       display: none;
       font-size: 0; }
+    input:checked + .prizes__item .prizes__pic {
+      top: 22px;
+      left: -17px;
+      width: 164.5px;
+      height: 85px; }
+    input:checked + .prizes__item .name {
+      font-size: 18.3px; }
+    input:checked + .prizes__item .prizes__btn {
+      display: block;
+      top: -4px;
+      right: 14px;
+      width: 163px;
+      height: 19px;
+      padding-top: 8px;
+      border-radius: 25px 25px 25px 25px;
+      font-family: 'OfficinaSerifBold';
+      font-size: 11px;
+      letter-spacing: 0; }
+    input:checked + .prizes__item .myplace:after {
+      display: none; }
   .prizes__pic {
+    top: 8px;
+    left: -10px;
     width: 89px;
     height: 52.5px; } }
 
@@ -708,30 +836,29 @@ input:checked + .prizes__item {
 ██████╔╝╚██████╔╝   ██║      ██║   ╚██████╔╝██║ ╚████║
 ╚═════╝  ╚═════╝    ╚═╝      ╚═╝    ╚═════╝ ╚═╝  ╚═══╝
 */
-/*
-.prizes__btn{
-    cursor: pointer;
-    display: block;
-    position: relative;
-	top: 3px;
-	right: 17px;
-	width: 266px;
-	height: 35px;
-	padding-top: 15px;
-	border-radius: 20px 20px 20px 20px;
-	text-align: center;
-	font-family: 'OfficinaSerifBold';
-	font-size: 17.36px;
-	text-transform: uppercase;
-	background: linear-gradient( 90deg, rgb(250,166,39) 0%, rgb(255,225,21) 99%);
+.prizes__btn {
+  cursor: pointer;
+  display: none;
+  position: relative;
+  top: 3px;
+  right: 17px;
+  width: 266px;
+  height: 35px;
+  padding-top: 15px;
+  border-radius: 20px 20px 20px 20px;
+  text-align: center;
+  font-family: 'OfficinaSerifBold';
+  font-size: 17.36px;
+  text-transform: uppercase;
+  background: -webkit-gradient(linear, left top, right top, from(#faa627), color-stop(99%, #ffe115));
+  background: -webkit-linear-gradient(left, #faa627 0%, #ffe115 99%);
+  background: -o-linear-gradient(left, #faa627 0%, #ffe115 99%);
+  background: linear-gradient(90deg, #faa627 0%, #ffe115 99%); }
+  .prizes__btn:active {
+    background-image: none;
+    background-color: #000000;
+    color: #fed618; }
 
-
-	&:active{
-	background-image: none;
-	background-color: #000000;
-	color: #fed618;
-	}
-}*/
 .prizes_onvertical {
   position: relative;
   width: 236px;
@@ -816,7 +943,8 @@ input:checked + .prizes__item {
     top: auto;
     -webkit-transform: none;
     -ms-transform: none;
-    transform: none; }
+    transform: none;
+    line-height: 1; }
   .prizes_onvertical .name {
     margin-right: 10px; }
   .prizes_onvertical .prizes__pic {
@@ -835,20 +963,31 @@ input:checked + .prizes__item {
       margin: 0; }
     .prizes_onvertical input:checked + .prizes__item .prizes__yellow-circle {
       width: 98px;
-      height: 97.5px; }
+      height: 97.5px;
+      margin: 27px 7px 10px; }
     .prizes_onvertical input:checked + .prizes__item .photo-circle {
+      top: 0;
       width: 56px;
       height: 57px; }
     .prizes_onvertical input:checked + .prizes__item .photo-circle__num {
       -webkit-transform: none;
       -ms-transform: none;
-      transform: none; }
+      transform: none;
+      font-size: 20px;
+      margin-top: 11px; }
     .prizes_onvertical input:checked + .prizes__item .photo-circle__text {
       -webkit-transform: none;
       -ms-transform: none;
-      transform: none; }
+      transform: none;
+      font-size: 12px;
+      line-height: 1; }
     .prizes_onvertical input:checked + .prizes__item .prizes__info {
       display: none; }
+    .prizes_onvertical input:checked + .prizes__item .prizes__pic {
+      top: 9px;
+      left: -12px;
+      width: 128px;
+      height: 74px; }
   @media screen and (min-width: 768px) and (max-width: 1079px) {
     .prizes_onvertical {
       margin: auto;
@@ -866,8 +1005,8 @@ input:checked + .prizes__item {
       .prizes_onvertical .photo-circle {
         width: 72px;
         height: 74px; }
-        .prizes_onvertical .photo-circle_num {
-          margin-top: 15px; }
+      .prizes_onvertical .photo-circle__num {
+        margin-top: 16px; }
       .prizes_onvertical .name {
         font-size: 22px; }
       .prizes_onvertical .prizes__pic {
@@ -892,8 +1031,19 @@ input:checked + .prizes__item {
         .prizes_onvertical input:checked + .prizes__item .photo-circle {
           width: 72px;
           height: 74px; }
+        .prizes_onvertical input:checked + .prizes__item .photo-circle__num {
+          margin-top: 16px;
+          font-size: 25.24px; }
+        .prizes_onvertical input:checked + .prizes__item .photo-circle__text {
+          font-size: 14.72px;
+          line-height: 1; }
         .prizes_onvertical input:checked + .prizes__item .name {
-          font-size: 22px; } }
+          font-size: 22px; }
+        .prizes_onvertical input:checked + .prizes__item .prizes__pic {
+          top: 12px;
+          left: -17px;
+          width: 164px;
+          height: 96px; } }
   @media screen and (max-width: 767px) {
     .prizes_onvertical {
       width: 320px;
@@ -923,19 +1073,33 @@ input:checked + .prizes__item {
         left: -7px;
         width: 75.5px;
         height: 44.5px; }
-      .prizes_onvertical input:checked + .prizes__item .prizes__item {
+      .prizes_onvertical input:checked + .prizes__item {
         margin: 0 30px 20px; }
-      .prizes_onvertical input:checked + .prizes__item .prizes__item-left {
-        width: 75px; }
-      .prizes_onvertical input:checked + .prizes__item .prizes__yellow-circle {
-        width: 58px;
-        height: 58px;
-        margin: 17px 7px 5px; }
-      .prizes_onvertical input:checked + .prizes__item .photo-circle {
-        width: 33.5px;
-        height: 34.5px; }
-      .prizes_onvertical input:checked + .prizes__item .prizes__info {
-        display: none; } }
+        .prizes_onvertical input:checked + .prizes__item .prizes__item-left {
+          width: 75px; }
+        .prizes_onvertical input:checked + .prizes__item .prizes__yellow-circle {
+          width: 58px;
+          height: 58px;
+          margin: 17px 7px 5px; }
+        .prizes_onvertical input:checked + .prizes__item .photo-circle {
+          width: 33.5px;
+          height: 34.5px; }
+        .prizes_onvertical input:checked + .prizes__item .photo-circle__num {
+          margin-top: 7px;
+          margin-bottom: 1px;
+          font-size: 12.5px; }
+        .prizes_onvertical input:checked + .prizes__item .photo-circle__text {
+          font-size: 7.25px; }
+        .prizes_onvertical input:checked + .prizes__item .prizes__info {
+          display: none; }
+        .prizes_onvertical input:checked + .prizes__item .prizes__pic {
+          top: 6px;
+          left: -7px;
+          width: 75.5px;
+          height: 44.5px; }
+        .prizes_onvertical input:checked + .prizes__item .name {
+          margin-right: 0;
+          font-size: 10.5px; } }
 
 .prizes_onsimple {
   width: auto;
@@ -978,6 +1142,7 @@ input:checked + .prizes__item {
       height: 99px;
       margin: 26px 19px 9px; }
     .prizes_onsimple input:checked + .prizes__item .photo-circle {
+      top: 0;
       width: 57px;
       height: 58px; }
     .prizes_onsimple input:checked + .prizes__item .photo-circle__num {
@@ -985,14 +1150,18 @@ input:checked + .prizes__item {
       margin-top: 11px;
       -webkit-transform: none;
       -ms-transform: none;
-      transform: none; }
+      transform: none;
+      font-size: 20px; }
     .prizes_onsimple input:checked + .prizes__item .photo-circle__text {
       top: auto;
-      margin-top: -1px;
+      margin-top: -10px;
       -webkit-transform: none;
       -ms-transform: none;
-      transform: none; }
+      transform: none;
+      font-size: 12px; }
     .prizes_onsimple input:checked + .prizes__item .prizes__pic {
+      top: 10px;
+      left: -14px;
       width: 128px;
       height: 74px; }
     .prizes_onsimple input:checked + .prizes__item .prizes__info {
@@ -1055,7 +1224,7 @@ input:checked + .prizes__item {
     transform: none; }
   .prizes_onsimple .photo-circle__text {
     top: auto;
-    margin-top: -1px;
+    margin-top: -10px;
     -webkit-transform: none;
     -ms-transform: none;
     transform: none; }
@@ -1075,7 +1244,7 @@ input:checked + .prizes__item {
       /*
    ██████╗██╗  ██╗███████╗ ██████╗██╗  ██╗███████╗██████╗ 
   ██╔════╝██║  ██║██╔════╝██╔════╝██║ ██╔╝██╔════╝██╔══██╗
-  ██║     ███████║█████╗  ██║     █████╔╝ █████╗  ██║  ██║////////////////убаны изменения/////////////
+  ██║     ███████║█████╗  ██║     █████╔╝ █████╗  ██║  ██║////////////////убpаны изменения/////////////
   ██║     ██╔══██║██╔══╝  ██║     ██╔═██╗ ██╔══╝  ██║  ██║
   ╚██████╗██║  ██║███████╗╚██████╗██║  ██╗███████╗██████╔╝
    ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═════╝ 
@@ -1134,6 +1303,7 @@ input:checked + .prizes__item {
           height: 107px;
           margin: 29px 20px 10px; }
         .prizes_onsimple input:checked + .prizes__item .photo-circle {
+          top: 0;
           width: 62px;
           height: 63px;
           color: #fdc81c; }
@@ -1181,7 +1351,8 @@ input:checked + .prizes__item {
           margin-top: 8px;
           font-size: 14px; }
         .prizes_onsimple .photo-circle__text {
-          font-size: 8px; }
+          font-size: 8px;
+          margin-top: -1px; }
       .prizes_onsimple .name {
         font-size: 12px;
         margin-left: 8px; }
@@ -1210,10 +1381,12 @@ input:checked + .prizes__item {
           width: 35px;
           height: 35px; }
           .prizes_onsimple input:checked + .prizes__item .photo-circle__num {
-            margin-top: 8px;
+            margin-top: 6px;
             font-size: 14px; }
           .prizes_onsimple input:checked + .prizes__item .photo-circle__text {
-            font-size: 8px; }
+            font-size: 8px;
+            margin-top: -1px;
+            line-height: 1.3; }
         .prizes_onsimple input:checked + .prizes__item .name {
           font-size: 12px;
           margin-left: 8px; }
