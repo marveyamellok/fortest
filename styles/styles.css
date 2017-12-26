@@ -426,54 +426,54 @@ template {
 /**
  * Слово "фото"
  */
-.PHOTOS_WORD {
+.PHOTOS_WORD, .photo-circle__text {
   font-family: "OfficinaSerifBook"; }
   @media screen and (max-width: 767px) {
-    .PHOTOS_WORD {
-      font-size: 16px;
+    .PHOTOS_WORD, .photo-circle__text {
+      font-size: 10px;
       line-height: 1; } }
   @media screen and (min-width: 768px) and (max-width: 1079px) {
-    .PHOTOS_WORD {
+    .PHOTOS_WORD, .photo-circle__text {
       font-size: 14.72px;
       line-height: 1; } }
   @media screen and (min-width: 1080px) {
-    .PHOTOS_WORD {
+    .PHOTOS_WORD, .photo-circle__text {
       font-size: 12px;
       line-height: 1; } }
 
 /**
  * Количество фото
  */
-.PHOTOS_NAME {
+.PHOTOS_NAME, .photo-circle__num {
   font-family: "OfficinaSerifBook"; }
   @media screen and (max-width: 767px) {
-    .PHOTOS_NAME {
-      font-size: 27.5px;
-      line-height: 1; } }
+    .PHOTOS_NAME, .photo-circle__num {
+      font-size: 15px;
+      line-height: 0.8; } }
   @media screen and (min-width: 768px) and (max-width: 1079px) {
-    .PHOTOS_NAME {
+    .PHOTOS_NAME, .photo-circle__num {
       font-size: 25.24px;
       line-height: 1; } }
   @media screen and (min-width: 1080px) {
-    .PHOTOS_NAME {
+    .PHOTOS_NAME, .photo-circle__num {
       font-size: 20px;
       line-height: 1; } }
 
 /**
  * Название приза
  */
-.PRIZE_NAME {
+.PRIZE_NAME, .prizes__item-left, .prizes_onvertical .name {
   font-family: "OfficinaSerifBold"; }
   @media screen and (max-width: 767px) {
-    .PRIZE_NAME {
-      font-size: 24.5px;
+    .PRIZE_NAME, .prizes__item-left, .prizes_onvertical .name {
+      font-size: 16px;
       line-height: 1.2; } }
   @media screen and (min-width: 768px) and (max-width: 1079px) {
-    .PRIZE_NAME {
-      font-size: 22.72px;
+    .PRIZE_NAME, .prizes__item-left, .prizes_onvertical .name {
+      font-size: 18px;
       line-height: 1.2; } }
   @media screen and (min-width: 1080px) {
-    .PRIZE_NAME {
+    .PRIZE_NAME, .prizes__item-left, .prizes_onvertical .name {
       font-size: 17.69px;
       line-height: 1.111; } }
 
@@ -499,14 +499,18 @@ template {
       font-size: 26px;
       line-height: 1.2; } }
 
-.PRIZE_NAME_CH {
+.PRIZE_NAME_CH, input:checked + .prizes__item .prizes__item-left {
   font-family: "OfficinaSerifBold"; }
   @media screen and (max-width: 767px) {
-    .PRIZE_NAME_CH {
+    .PRIZE_NAME_CH, input:checked + .prizes__item .prizes__item-left {
       font-size: 24px;
       line-height: 1.2; } }
+  @media screen and (min-width: 768px) and (max-width: 1079px) {
+    .PRIZE_NAME_CH, input:checked + .prizes__item .prizes__item-left {
+      font-size: 30px;
+      line-height: 1.2; } }
   @media screen and (min-width: 1080px) {
-    .PRIZE_NAME_CH {
+    .PRIZE_NAME_CH, input:checked + .prizes__item .prizes__item-left {
       font-size: 30px;
       line-height: 1; } }
 
@@ -706,3 +710,188 @@ input:checked + .prizes__item {
 	color: #fed618;
 	}
 }*/
+.prizes_onvertical {
+  position: relative;
+  width: 236px;
+  height: auto;
+  margin: 0;
+  /*
+   ██████╗██╗  ██╗███████╗ ██████╗██╗  ██╗███████╗██████╗ 
+  ██╔════╝██║  ██║██╔════╝██╔════╝██║ ██╔╝██╔════╝██╔══██╗
+  ██║     ███████║█████╗  ██║     █████╔╝ █████╗  ██║  ██║////////////////убаны изменения/////////////
+  ██║     ██╔══██║██╔══╝  ██║     ██╔═██╗ ██╔══╝  ██║  ██║
+  ╚██████╗██║  ██║███████╗╚██████╗██║  ██╗███████╗██████╔╝
+   ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═════╝ 
+   */
+  /*
+████████╗ █████╗ ██████╗ ██╗     ███████╗████████╗
+╚══██╔══╝██╔══██╗██╔══██╗██║     ██╔════╝╚══██╔══╝
+   ██║   ███████║██████╔╝██║     █████╗     ██║   
+   ██║   ██╔══██║██╔══██╗██║     ██╔══╝     ██║   
+   ██║   ██║  ██║██████╔╝███████╗███████╗   ██║   
+   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝   ╚═╝   
+*/
+  /*
+███╗   ███╗ ██████╗ ██████╗ ██╗██╗     ███████╗
+████╗ ████║██╔═══██╗██╔══██╗██║██║     ██╔════╝
+██╔████╔██║██║   ██║██████╔╝██║██║     █████╗  
+██║╚██╔╝██║██║   ██║██╔══██╗██║██║     ██╔══╝  
+██║ ╚═╝ ██║╚██████╔╝██████╔╝██║███████╗███████╗
+╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚═╝╚══════╝╚══════╝
+
+*/ }
+  .prizes_onvertical .prizes__item {
+    margin-bottom: 48px;
+    /*
+██╗  ██╗ ██████╗ ██╗   ██╗███████╗██████╗ 
+██║  ██║██╔═══██╗██║   ██║██╔════╝██╔══██╗
+███████║██║   ██║██║   ██║█████╗  ██████╔╝
+██╔══██║██║   ██║╚██╗ ██╔╝██╔══╝  ██╔══██╗
+██║  ██║╚██████╔╝ ╚████╔╝ ███████╗██║  ██║
+╚═╝  ╚═╝ ╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═╝
+*/ }
+    .prizes_onvertical .prizes__item:hover .prizes__yellow-circle,
+    .prizes_onvertical .prizes__item:hover .photo-circle,
+    .prizes_onvertical .prizes__item:hover .name {
+      -webkit-transition: -webkit-transform 0.5s;
+      transition: -webkit-transform 0.5s;
+      -o-transition: transform 0.5s;
+      transition: transform 0.5s;
+      transition: transform 0.5s, -webkit-transform 0.5s;
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2); }
+  .prizes_onvertical .prizes__item-left {
+    width: 122px;
+    margin: 0; }
+  .prizes_onvertical .prizes__yellow-circle {
+    width: 98px;
+    height: 97.5px;
+    margin: 27px 7px 10px; }
+  .prizes_onvertical .photo-circle {
+    width: 56px;
+    height: 57px; }
+  .prizes_onvertical .photo-circle__num {
+    top: auto;
+    margin-top: 11px;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none; }
+  .prizes_onvertical .photo-circle__text {
+    top: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none; }
+  .prizes_onvertical .name {
+    margin-right: 10px; }
+  .prizes_onvertical .prizes__pic {
+    width: 128px;
+    height: 74px; }
+  .prizes_onvertical input:checked + .prizes__item {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    width: auto;
+    height: auto; }
+    .prizes_onvertical input:checked + .prizes__item .prizes__item-left {
+      width: 122px;
+      margin: 0; }
+    .prizes_onvertical input:checked + .prizes__item .prizes__yellow-circle {
+      width: 98px;
+      height: 97.5px; }
+    .prizes_onvertical input:checked + .prizes__item .photo-circle {
+      width: 56px;
+      height: 57px; }
+    .prizes_onvertical input:checked + .prizes__item .photo-circle__num {
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none; }
+    .prizes_onvertical input:checked + .prizes__item .photo-circle__text {
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none; }
+    .prizes_onvertical input:checked + .prizes__item .prizes__info {
+      display: none; }
+  @media screen and (min-width: 768px) and (max-width: 1079px) {
+    .prizes_onvertical {
+      margin: auto;
+      width: 700px; }
+      .prizes_onvertical .prizes__item {
+        margin: 0 91px 52px; }
+      .prizes_onvertical .prizes__item-left {
+        width: 155px;
+        height: 196px;
+        margin: 0; }
+      .prizes_onvertical .prizes__yellow-circle {
+        width: 127px;
+        height: 127px;
+        margin: 33px 7px 11px; }
+      .prizes_onvertical .photo-circle {
+        width: 72px;
+        height: 74px; }
+        .prizes_onvertical .photo-circle_num {
+          margin-top: 15px; }
+      .prizes_onvertical .name {
+        font-size: 22px; }
+      .prizes_onvertical .prizes__pic {
+        width: 164px;
+        height: 96px; }
+      .prizes_onvertical input:checked + .prizes__item {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        margin: 0 91px 52px; }
+        .prizes_onvertical input:checked + .prizes__item .prizes__item-left {
+          width: 155px;
+          height: 196px;
+          margin: 0; }
+        .prizes_onvertical input:checked + .prizes__item .prizes__yellow-circle {
+          width: 127px;
+          height: 127px;
+          margin: 33px 7px 11px; }
+        .prizes_onvertical input:checked + .prizes__item .photo-circle {
+          width: 72px;
+          height: 74px; }
+        .prizes_onvertical input:checked + .prizes__item .name {
+          font-size: 22px; } }
+  @media screen and (max-width: 767px) {
+    .prizes_onvertical {
+      width: 320px;
+      margin: auto; }
+      .prizes_onvertical .prizes__item {
+        margin: 0 30px 20px; }
+      .prizes_onvertical .prizes__item-left {
+        width: 75px; }
+      .prizes_onvertical .prizes__yellow-circle {
+        width: 58px;
+        height: 58px;
+        margin: 17px 7px 5px; }
+      .prizes_onvertical .photo-circle {
+        width: 33.5px;
+        height: 34.5px; }
+        .prizes_onvertical .photo-circle__num {
+          margin-top: 8px;
+          margin-bottom: 2px;
+          font-size: 12.5px; }
+        .prizes_onvertical .photo-circle__text {
+          font-size: 7.25px; }
+      .prizes_onvertical .name {
+        margin-right: 0;
+        font-size: 10.5px; }
+      .prizes_onvertical .prizes__pic {
+        width: 75.5px;
+        height: 44.5px; }
+      .prizes_onvertical input:checked + .prizes__item .prizes__item {
+        margin: 0 30px 20px; }
+      .prizes_onvertical input:checked + .prizes__item .prizes__item-left {
+        width: 75px; }
+      .prizes_onvertical input:checked + .prizes__item .prizes__yellow-circle {
+        width: 58px;
+        height: 58px;
+        margin: 17px 7px 5px; }
+      .prizes_onvertical input:checked + .prizes__item .photo-circle {
+        width: 33.5px;
+        height: 34.5px; }
+      .prizes_onvertical input:checked + .prizes__item .prizes__info {
+        display: none; } }

@@ -21,7 +21,7 @@ $DESKTOP: 1080px;
 .PHOTOS_WORD {
   font-family: $OfficinaSerifBook;
   @include MOBILE() {
-    font-size: 16px;
+    font-size: 10px;
     line-height: 1;
   }
   @include TABLET() {
@@ -39,8 +39,8 @@ $DESKTOP: 1080px;
 .PHOTOS_NAME {
   font-family: $OfficinaSerifBook;
   @include MOBILE() {
-    font-size: 27.5px;
-    line-height: 1;
+    font-size: 15px;
+    line-height: 0.8;
   }
   @include TABLET() {
     font-size: 25.24px;
@@ -57,11 +57,11 @@ $DESKTOP: 1080px;
 .PRIZE_NAME {
   font-family: $OfficinaSerifBold;
   @include MOBILE() {
-    font-size: 24.5px;
+    font-size: 16px;
     line-height: 1.2;
   }
   @include TABLET() {
-    font-size: 22.72px;
+    font-size: 18px;
     line-height: 1.2;
   }
   @include DESKTOP() {
@@ -95,6 +95,10 @@ $DESKTOP: 1080px;
   font-family: $OfficinaSerifBold;
   @include MOBILE() {
     font-size: 24px;
+    line-height: 1.2;
+  }
+  @include TABLET() {
+    font-size: 30px;
     line-height: 1.2;
   }
   @include DESKTOP() {

@@ -1,0 +1,273 @@
+///////////основные элементы////////
+
+.prizes_onvertical{
+  position: relative;
+  width: 236px;
+  height: auto;
+  margin: 0;
+
+  .prizes__item{
+    margin-bottom: 48px;
+     //margin-bottom: 46px;
+
+/*
+██╗  ██╗ ██████╗ ██╗   ██╗███████╗██████╗ 
+██║  ██║██╔═══██╗██║   ██║██╔════╝██╔══██╗
+███████║██║   ██║██║   ██║█████╗  ██████╔╝
+██╔══██║██║   ██║╚██╗ ██╔╝██╔══╝  ██╔══██╗
+██║  ██║╚██████╔╝ ╚████╔╝ ███████╗██║  ██║
+╚═╝  ╚═╝ ╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═╝
+*/
+
+  &:hover{
+
+    .prizes__yellow-circle,
+    .photo-circle,
+    .name{
+      transition: transform 0.5s;
+      transform: scale(1.2);
+    }
+  }
+
+  }
+
+  .prizes__item-left{
+     width: 122px;
+     margin: 0; 
+  }
+
+  .prizes__yellow-circle{
+    width: 98px;
+    height: 97.5px;
+    margin: 27px 7px 10px;
+  }
+  .photo-circle{
+    width: 56px;
+    height: 57px;
+  }
+
+  .photo-circle__num{
+    top: auto;
+    margin-top: 11px;
+    transform: none;
+  }
+  .photo-circle__text{
+    top: auto;
+    transform: none;
+  }
+  .name{
+    margin-right: 10px;
+    @extend .PRIZE_NAME;
+  }
+
+  .prizes__pic{
+    width: 128px;
+    height: 74px;
+  }
+  
+  /*
+   ██████╗██╗  ██╗███████╗ ██████╗██╗  ██╗███████╗██████╗ 
+  ██╔════╝██║  ██║██╔════╝██╔════╝██║ ██╔╝██╔════╝██╔══██╗
+  ██║     ███████║█████╗  ██║     █████╔╝ █████╗  ██║  ██║////////////////убаны изменения/////////////
+  ██║     ██╔══██║██╔══╝  ██║     ██╔═██╗ ██╔══╝  ██║  ██║
+  ╚██████╗██║  ██║███████╗╚██████╗██║  ██╗███████╗██████╔╝
+   ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═════╝ 
+   */
+
+   input:checked + .prizes__item{
+    transition: none;
+
+    width: auto;
+    height: auto;
+
+    .prizes__item-left{
+      width: 122px;
+      margin: 0;
+    }
+
+    .prizes__yellow-circle{
+      width: 98px;
+      height: 97.5px;
+    }
+
+    .photo-circle{
+      width: 56px;
+      height: 57px;
+    }
+
+    .photo-circle__num{
+      transform: none;
+    }
+    .photo-circle__text{
+      transform: none;
+    }
+
+
+    .prizes__info{
+      display: none;
+    }
+   }
+
+  /*
+████████╗ █████╗ ██████╗ ██╗     ███████╗████████╗
+╚══██╔══╝██╔══██╗██╔══██╗██║     ██╔════╝╚══██╔══╝
+   ██║   ███████║██████╔╝██║     █████╗     ██║   
+   ██║   ██╔══██║██╔══██╗██║     ██╔══╝     ██║   
+   ██║   ██║  ██║██████╔╝███████╗███████╗   ██║   
+   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝   ╚═╝   
+*/
+
+@include TABLET{
+  margin: auto;
+  width: 700px;
+  //height: 441px;
+
+  .prizes__item{
+    margin: 0 91px 52px;
+  }
+
+  .prizes__item-left{
+    width: 155px;
+    height: 196px;
+    margin:0 ;
+  }
+
+  .prizes__yellow-circle{
+    width: 127px;
+    height: 127px;
+    margin: 33px 7px 11px;
+  }
+
+  .photo-circle{
+    width: 72px;
+    height: 74px;
+
+    &_num{
+      margin-top: 15px;
+    }
+  }
+  .name{
+    font-size: 22px;
+  }
+
+  .prizes__pic{
+    width: 164px;
+    height: 96px;
+  }
+
+  input:checked + .prizes__item{
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin: 0 91px 52px;
+
+    .prizes__item-left{
+      width: 155px;
+      height: 196px;
+      margin:0 ;
+    }
+
+    .prizes__yellow-circle{
+      width: 127px;
+      height: 127px;
+      margin: 33px 7px 11px;
+    }
+
+    .photo-circle{
+      width: 72px;
+      height: 74px;
+    }
+
+    .name{
+      font-size: 22px;
+    }
+
+  }
+
+}
+
+/*
+███╗   ███╗ ██████╗ ██████╗ ██╗██╗     ███████╗
+████╗ ████║██╔═══██╗██╔══██╗██║██║     ██╔════╝
+██╔████╔██║██║   ██║██████╔╝██║██║     █████╗  
+██║╚██╔╝██║██║   ██║██╔══██╗██║██║     ██╔══╝  
+██║ ╚═╝ ██║╚██████╔╝██████╔╝██║███████╗███████╗
+╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚═╝╚══════╝╚══════╝
+
+*/
+
+@include MOBILE{
+  width: 320px;
+  margin: auto;
+
+  .prizes__item{
+    margin: 0 30px 20px;
+  }
+
+  .prizes__item-left{
+    width: 75px;
+  }
+
+  .prizes__yellow-circle{
+    width: 58px;
+    height: 58px;
+    margin: 17px 7px 5px;
+  }
+
+  .photo-circle{
+    width: 33.5px;
+    height: 34.5px;
+
+    &__num{
+      margin-top: 8px;
+      margin-bottom: 2px;
+      font-size: 12.5px;
+    }
+
+    &__text{
+      font-size: 7.25px;
+    }
+  }
+
+  .name{
+    margin-right: 0;
+    font-size: 10.5px;
+  }
+
+  .prizes__pic{
+    width: 75.5px;
+    height: 44.5px;
+  }
+
+  input:checked + .prizes__item{
+    .prizes__item{
+      margin: 0 30px 20px;
+    }
+
+    .prizes__item-left{
+      width: 75px;
+    }
+
+
+    .prizes__yellow-circle{
+      width: 58px;
+      height: 58px;
+      margin: 17px 7px 5px;
+    }
+
+    .photo-circle{
+      width: 33.5px;
+      height: 34.5px;
+    }
+
+    .prizes__info{
+      display: none;
+    }
+  }
+}
+
+
+}
+
+
