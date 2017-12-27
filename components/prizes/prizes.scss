@@ -38,7 +38,7 @@ input[type='radio']{
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
-	width: 144px;
+	width: 148px;
 	transition:  margin 1s;
 	//height: 155px;
 
@@ -49,17 +49,17 @@ input[type='radio']{
 	position: relative;
 	border-radius: 50%;
 	background: linear-gradient( 90deg, rgb(250,166,39) 0%, rgb(255,225,21) 99%);
-	width: 115px;
-	height: 114px;
-	margin: 28px 12px 7px 12px;
+	width: 114px;
+    height: 113px;
+	margin: 33px 12px 7px 12px;
 }
 
 .photo-circle{
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 61px;
-	height: 62px;
+	width: 64px;
+    height: 63px;
 	border-radius: 50%;
 	background-color: #000000;
 	color: #ffffff;
@@ -245,7 +245,7 @@ input:checked + .prizes__item{
 @include TABLET{
 
 	.prizes{
-		width: 700px;
+		width: 738px;
 		display: flex;
 		flex-direction: row;
 	}
@@ -255,8 +255,30 @@ input:checked + .prizes__item{
 	.prizes__item{
 		//margin-top: 335px;
 		//margin-right: 50px;
-		margin: 335px auto auto;
+		margin: 372px auto auto;
 	}
+
+	.photo-circle{
+		width: 66px;
+    	height: 65px;
+	}
+
+	.photo-circle__text {
+	    line-height: 2.6;
+	}
+
+	.prizes__yellow-circle{
+		margin: 33px 12px 8px 14px;
+	}
+
+	.prizes__item-left{
+		width: 152px;
+	}
+
+	.name{
+		margin-right: 5px;
+	}
+
 
 
 
@@ -267,29 +289,54 @@ input:checked + .prizes__item{
 		right: 0;
 		margin: auto;
 
+		.prizes__item-left{
+			width: 264px;
+    		margin-right: 117px;
+		}
+
 
 		.photo-circle__num{
 			font-size: 42.5px;
 		}
-    .photo-circle__text{
-    	font-size: 24.81px;
-    }
+	    .photo-circle__text{
+	    	font-size: 24.81px;
+	    }
 
-    .prizes__info{
-    	opacity: 1;
-    	//outline: 2px solid red;
-    }
+	    .prizes__info{
+	    	opacity: 1;
+	    	//outline: 2px solid red;
+	    }
 
-    .prizes__info-myplace,
-    .prizes__info-renewal,
-    .myplace:after{
-    	display: none;
-    }
+	    .prizes__info-myplace,
+	    .prizes__info-renewal,
+	    .myplace:after{
+	    	display: none;
+	    }
 
-    .prizes__btn{
-    	display: block;
-    }
-}
+	    .prizes__info-name{
+	    	margin-bottom: 24px;
+
+	    	&:after{
+    		    top: 24px;
+				left: -20px;
+				width: 265px;
+	    	}
+	    }
+
+	    .prizes__info-date{
+	    	font-size: 18px;
+	    }
+
+	    .prizes__btn{
+	    	display: block;
+	    }
+
+
+	    .photo-circle{
+	    	width: 104px;
+	    	height: 104px;
+	    }
+	}
 
 		.prizes__pic{
 			width: 146px;
@@ -316,20 +363,20 @@ input:checked + .prizes__item{
 	}
 
 	.prizes__item-left{
-		width: auto;
+		width: 101px;
 	}
 
 
 	.prizes__yellow-circle{
 		width: 69.5px;
-		height: 69.5px;
-		margin: 20px 12px 7.5px;
+		height: 69px;
+		margin: 21px 12px 6.5px;
 		//transition: width 0.5s, height 0.5s;
 	}
 
 	.photo-circle{
-		width: 38px;
-		height: 38px;
+		width: 37px;
+		height: 37px;
 
 		&__text{
 			line-height: 1.5;
@@ -421,16 +468,16 @@ input:checked + .prizes__item{
 
 		.prizes__btn{
 			display: block;
-	    top: -4px;
-	    right: 14px;
-	    width: 163px;
-	    height: 19px;
-	    padding-top: 8px;
-	    border-radius: 25px 25px 25px 25px;
-	    font-family: 'OfficinaSerifBold';
-	    font-size: 11px;
-	    letter-spacing: 0;
-		}
+		    top: -5px;
+    		right: 12px;
+    		width: 163px;
+		    height: 19px;
+		    padding-top: 8px;
+		    border-radius: 25px 25px 25px 25px;
+		    font-family: 'OfficinaSerifBold';
+		    font-size: 11px;
+		    letter-spacing: 0;
+			}
 
 		.myplace:after{
 			display: none;
@@ -465,12 +512,12 @@ input:checked + .prizes__item{
 	cursor: pointer;
 	display: none;
 	position: relative;
-	top: 3px;
-	right: 17px;
-	width: 266px;
-	height: 35px;
-	padding-top: 15px;
-	border-radius: 20px 20px 20px 20px;
+	top: 6px;
+    right: 20px;
+    width: 266px;
+    height: 31px;
+    padding-top: 13px;
+    border-radius: 26px;
 	text-align: center;
 	font-family: 'OfficinaSerifBold';
 	font-size: 17.36px;

@@ -64,12 +64,13 @@
 
   .photo-circle__num{
     top: auto;
-    margin-top: 11px;
+    margin-top: 10px;
     transform: none;
   }
   .photo-circle__text{
     top: auto;
     transform: none;
+    margin-top: -3px;
     line-height: 1;
   }
   .name{
@@ -118,12 +119,14 @@
 
     .photo-circle__num{
       transform: none;
-      font-size: 20px;
-      margin-top: 11px;
+      font-size: 24.16px;
+      margin-top: 10px;
     }
+
     .photo-circle__text{
       transform: none;
-      font-size: 12px;
+      font-size: 15px;
+      margin-top: -3px;
       line-height: 1;
 
     }
@@ -161,7 +164,7 @@
   }
 
   .prizes__item-left{
-    width: 155px;
+    width: 156px;
     height: 196px;
     margin:0 ;
   }
@@ -174,11 +177,14 @@
 
   .photo-circle{
     width: 72px;
-    height: 74px;
+    height: 73px;
   }
 
   .photo-circle__num{
     margin-top: 16px;
+  }
+  .photo-circle__text{
+    margin-top: 0px;
   }
 
   .name{
@@ -200,20 +206,26 @@
     margin: 0 91px 52px;
 
     .prizes__item-left{
-      width: 155px;
+      width: 156px;
       height: 196px;
       margin:0 ;
+      transform: none;
+      transition: none !important;
     }
 
     .prizes__yellow-circle{
       width: 127px;
       height: 127px;
       margin: 33px 7px 11px;
+      transform: none;
+      transition: none !important;
     }
 
     .photo-circle{
       width: 72px;
       height: 74px;
+      transform: none;
+      transition: none !important;
     }
     .photo-circle__num{
       margin-top: 16px;
@@ -223,12 +235,15 @@
     .photo-circle__text{
       font-size: 14.72px;
       line-height: 1;
+      margin-top: 0;
 
     }
 
 
     .name{
       font-size: 22px;
+      transform: none;
+      transition: none !important;
     }
 
     .prizes__pic{
@@ -268,7 +283,7 @@
   .prizes__yellow-circle{
     width: 58px;
     height: 58px;
-    margin: 17px 7px 5px;
+    margin: 17px 7px 6px;
   }
 
   .photo-circle{
@@ -283,6 +298,7 @@
 
     &__text{
       font-size: 7.25px;
+      margin-top: 0px;
     }
   }
 
@@ -310,7 +326,7 @@
     .prizes__yellow-circle{
       width: 58px;
       height: 58px;
-      margin: 17px 7px 5px;
+      margin: 17px 7px 6px;
     }
 
     .photo-circle{
@@ -326,6 +342,7 @@
 
     .photo-circle__text{
       font-size: 7.25px;
+      margin-top: 0px;
     }
 
     .prizes__info{
