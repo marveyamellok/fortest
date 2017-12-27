@@ -3,13 +3,16 @@ input[type='radio']{
 }
 
 .prizes__pic{
-	position: absolute;
-	top: 10px;
-	left: -18px;
-	width: 146px;
-	height: 86px;
-	background: url('../img/mac.png') no-repeat;
-	background-size: 100% 100%;
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    bottom: -10%;
+    right: -10%;
+    margin: auto;
+    width: auto;
+    height: auto;
+    background: url(../img/mac.png) no-repeat center;
+    background-size: contain;
 }
 
 /////////////////////////////основной блок///////////////////////////////
@@ -28,10 +31,13 @@ input[type='radio']{
 .prizes__item{
 	position: relative;
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: top;
 	width: auto;
 	cursor: pointer;
-	transition: margin-right 0.5s;
+	will-change: transform;
+	transition: margin 0.5s;
+	margin-top: 70px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .prizes__item-left{
@@ -39,7 +45,8 @@ input[type='radio']{
 	display: inline-block;
 	vertical-align: middle;
 	width: 148px;
-	transition:  margin 1s;
+	will-change: transform;
+	transition:  margin 0.5s;
 	//height: 155px;
 
 	@extend .PRIZE_NAME;
@@ -50,8 +57,10 @@ input[type='radio']{
 	border-radius: 50%;
 	background: linear-gradient( 90deg, rgb(250,166,39) 0%, rgb(255,225,21) 99%);
 	width: 114px;
-    height: 113px;
+  height: 113px;
 	margin: 33px 12px 7px 12px;
+	will-change: transform;
+	transition: width 0.5s, height 0.5s;
 }
 
 .photo-circle{
@@ -59,29 +68,27 @@ input[type='radio']{
 	top: 0;
 	right: 0;
 	width: 64px;
-    height: 63px;
+  height: 63px;
 	border-radius: 50%;
 	background-color: #000000;
-	color: #ffffff;
-	transition: none;
-}
-
-.photo-circle__num,
-.photo-circle__text{
-	position: relative;
-	display: block;
-	top: 50%;
-	transform: translateY(-86%);
-
-	
+	color: #ffffff;    
+	will-change: transform;
+	transition: width 0.5s, height 0.5s;
 }
 
 .photo-circle__num{
 	@extend .PHOTOS_NAME;
+	will-change: transform;
+	transition: font-size 0.5s;
+	margin-top: 12px;
+
 }
 .photo-circle__text{
 	@extend .PHOTOS_WORD;
-	line-height: 2.5;
+	will-change: transform;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transition: font-size 0.5s;
 }
 
 .prizes__info{
@@ -92,6 +99,11 @@ input[type='radio']{
 	transition-delay: 0.3s;
 }
 
+.name{	
+	will-change: transform;
+	transition: font-size 0.5s;
+}
+
 
 
 //////////////////////выбор приза//////////////////////
@@ -99,11 +111,13 @@ input[type='radio']{
 input:checked + .prizes__item{
 	//width: 563px;
 	height: 316px;
+	margin-top: 0;
 
 	.prizes__item-left{
 		width: 286px;
 		//float: left;
 		margin-right: 24px;
+		//transition: margin 0s;
 
 		@extend .PRIZE_NAME_CH;
 	}
@@ -111,7 +125,7 @@ input:checked + .prizes__item{
 	.prizes__yellow-circle{
 		width: 218px;
 		height: 219px;
-		margin: 49px 12px 22px 43px;
+		margin: 49px 12px 22px 26px;
 	}
 
 	.prizes__info{
@@ -121,10 +135,11 @@ input:checked + .prizes__item{
 		margin-right: 66px;
 		width: 254px;
 		height: 167px;
+		margin-top: 73px;
 		font-size: 100%;
 		opacity: 1;
 		text-align: left;
-		vertical-align: middle;
+		vertical-align: top;
 		font-family: 'OfficinaSerifBook';
 	}
 
@@ -177,7 +192,6 @@ input:checked + .prizes__item{
 			background: url('../img/prize.png') no-repeat;
 
 		}
-
 	}
 
 	.prizes__info-myplace{
@@ -212,24 +226,14 @@ input:checked + .prizes__item{
 
 		&__num{
 			@extend .PHOTOS_NAME_CH;
-			margin-top: 7px;
-			line-height: 1;
-			transform: translateY(-100%);
+			margin-top: 18px;
 		}
 
 		&__text{
 			@extend .PHOTOS_WORD_CH;
-			line-height: 2.5;
-			transform: translateY(-100%);
 		}
 	}
 
-	.prizes__pic{
-		top: 25px;
-			left: -28px;
-		width: 283px;
-		height: 166px;
-	}
 
 }
 /*
@@ -264,7 +268,6 @@ input:checked + .prizes__item{
 	}
 
 	.photo-circle__text {
-	    line-height: 2.6;
 	}
 
 	.prizes__yellow-circle{
@@ -317,9 +320,9 @@ input:checked + .prizes__item{
 	    	margin-bottom: 24px;
 
 	    	&:after{
-    		    top: 24px;
-				left: -20px;
-				width: 265px;
+    		  top: 24px;
+					left: -20px;
+					width: 265px;
 	    	}
 	    }
 
@@ -338,10 +341,6 @@ input:checked + .prizes__item{
 	    }
 	}
 
-		.prizes__pic{
-			width: 146px;
-			height: 86px;
-		}
 
 	}
 
@@ -359,11 +358,15 @@ input:checked + .prizes__item{
 	
 
 	.prizes{
-		width: 550px;
+		width: 560px;
+	}
+	.prizes__item{
+		margin-top: 35px;
+		margin-right: 5px;
 	}
 
 	.prizes__item-left{
-		width: 101px;
+		width: 94px;
 	}
 
 
@@ -378,8 +381,8 @@ input:checked + .prizes__item{
 		width: 37px;
 		height: 37px;
 
-		&__text{
-			line-height: 1.5;
+		&__num{
+			margin-top: 6px;
 		}
 	}
 
@@ -411,7 +414,7 @@ input:checked + .prizes__item{
 			top: 0;
 
 			&__num{
-				margin-top: 4px;
+				margin-top: 12px;
 				font-size: 23.5px;
 
 			}
@@ -428,6 +431,7 @@ input:checked + .prizes__item{
 			margin-right: 0;
 			margin-left: 21px;
 			font-size: 11px;
+			margin-top: 0;
 		}
 
 		.prizes__info-name{
@@ -455,13 +459,6 @@ input:checked + .prizes__item{
 			font-size: 0;
 		}
 
-		.prizes__pic{
-			top: 22px;
-    	left: -17px;
-			width: 164.5px;
-			height: 85px;
-		}
-
 		.name{
 			font-size: 18.3px;
 		}
@@ -483,12 +480,6 @@ input:checked + .prizes__item{
 			display: none;
 		}
 
-	}
-	.prizes__pic{
-		top: 8px;
-    left: -10px;
-		width: 89px;
-		height: 52.5px;
 	}
 
 	

@@ -40,7 +40,7 @@ $DESKTOP: 1080px;
   font-family: $OfficinaSerifBook;
   @include MOBILE() {
     font-size: 15px;
-    line-height: 0.8;
+    line-height: 1;
   }
   @include TABLET() {
     font-size: 25.24px;
@@ -58,48 +58,48 @@ $DESKTOP: 1080px;
   font-family: $OfficinaSerifBold;
   @include MOBILE() {
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1;
   }
   @include TABLET() {
     font-size: 18px;
-    line-height: 1.2;
+    line-height: 1;
   }
   @include DESKTOP() {
     font-size: 17.69px;
-    line-height: 1.111;
+    line-height: 1;
   }
 }
 .PHOTOS_WORD_CH {
   font-family: $OfficinaSerifBook;
   @include MOBILE() {
     font-size: 22px;
-    line-height: 1.2;
+    line-height: 1;
   }
   @include DESKTOP() {
     font-size: 22px;
-    line-height: 1.2;
+    line-height: 1;
   }
 }
 .PHOTOS_NAME_CH {
   font-family: $OfficinaSerifBook;
   @include MOBILE() {
     font-size: 37.5px;
-    line-height: 1.2;
+    line-height: 1;
   }
   @include DESKTOP() {
     font-size: 38.5px;
-    line-height: 1.2;
+    line-height: 1;
   }
 }
 .PRIZE_NAME_CH {
   font-family: $OfficinaSerifBold;
   @include MOBILE() {
     font-size: 24px;
-    line-height: 1.2;
+    line-height: 1;
   }
   @include TABLET() {
     font-size: 30px;
-    line-height: 1.2;
+    line-height: 1;
   }
   @include DESKTOP() {
     font-size: 30px;
