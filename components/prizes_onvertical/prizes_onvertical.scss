@@ -25,7 +25,6 @@
       .prizes__yellow-circle,
       .photo-circle,
       .name{
-        transition: transform 0.5s;
         transform: scale(1.2);
       }
     }
@@ -39,6 +38,12 @@
       }
     }    
   }
+
+      .prizes__yellow-circle,
+      .photo-circle,
+      .name{
+        transition: transform 0.5s;
+      }
 
   }
 
@@ -149,6 +154,7 @@
   margin: auto;
   width: 700px;
   //height: 441px;
+  display: block;
 
   .prizes__item{
     margin: 0 91px 52px;

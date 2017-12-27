@@ -551,9 +551,9 @@ input[type='radio'] {
   display: inline-block;
   vertical-align: middle;
   width: 144px;
-  -webkit-transition: margin 0.5s;
-  -o-transition: margin 0.5s;
-  transition: margin 0.5s; }
+  -webkit-transition: margin 1s;
+  -o-transition: margin 1s;
+  transition: margin 1s; }
 
 .prizes__yellow-circle {
   position: relative;
@@ -700,17 +700,25 @@ input:checked + .prizes__item {
 
 /*
 
-████████╗ █████╗ ██████╗ ██╗     ███████╗████████╗
-╚══██╔══╝██╔══██╗██╔══██╗██║     ██╔════╝╚══██╔══╝
+  ████████╗ █████╗ ██████╗ ██╗     ███████╗████████╗
+  ╚══██╔══╝██╔══██╗██╔══██╗██║     ██╔════╝╚══██╔══╝
 	 ██║   ███████║██████╔╝██║     █████╗     ██║   
 	 ██║   ██╔══██║██╔══██╗██║     ██╔══╝     ██║   
 	 ██║   ██║  ██║██████╔╝███████╗███████╗   ██║   
 	 ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝   ╚═╝   
 	 */
 @media screen and (min-width: 768px) and (max-width: 1079px) {
+  .prizes {
+    width: 700px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
   .prizes__item {
-    margin-top: 335px;
-    margin-right: 50px; }
+    margin: 335px auto auto; }
   input:checked + .prizes__item {
     position: absolute;
     top: 0;
@@ -722,8 +730,7 @@ input:checked + .prizes__item {
     input:checked + .prizes__item .photo-circle__text {
       font-size: 24.81px; }
     input:checked + .prizes__item .prizes__info {
-      opacity: 1;
-      outline: 2px solid red; }
+      opacity: 1; }
     input:checked + .prizes__item .prizes__info-myplace,
     input:checked + .prizes__item .prizes__info-renewal,
     input:checked + .prizes__item .myplace:after {
@@ -757,6 +764,8 @@ input:checked + .prizes__item {
     height: 38px; }
     .photo-circle__text {
       line-height: 1.5; }
+  .name {
+    font-size: 11px; }
   input:checked + .prizes__item {
     margin-right: 20px;
     width: auto;
@@ -903,11 +912,6 @@ input:checked + .prizes__item {
       .prizes_onvertical .prizes__item:hover .prizes__yellow-circle,
       .prizes_onvertical .prizes__item:hover .photo-circle,
       .prizes_onvertical .prizes__item:hover .name {
-        -webkit-transition: -webkit-transform 0.5s;
-        transition: -webkit-transform 0.5s;
-        -o-transition: transform 0.5s;
-        transition: transform 0.5s;
-        transition: transform 0.5s, -webkit-transform 0.5s;
         -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
         transform: scale(1.2); } }
@@ -923,6 +927,14 @@ input:checked + .prizes__item {
         -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
         transform: scale(1.2); } }
+    .prizes_onvertical .prizes__item .prizes__yellow-circle,
+    .prizes_onvertical .prizes__item .photo-circle,
+    .prizes_onvertical .prizes__item .name {
+      -webkit-transition: -webkit-transform 0.5s;
+      transition: -webkit-transform 0.5s;
+      -o-transition: transform 0.5s;
+      transition: transform 0.5s;
+      transition: transform 0.5s, -webkit-transform 0.5s; }
   .prizes_onvertical .prizes__item-left {
     width: 122px;
     margin: 0; }
@@ -991,7 +1003,8 @@ input:checked + .prizes__item {
   @media screen and (min-width: 768px) and (max-width: 1079px) {
     .prizes_onvertical {
       margin: auto;
-      width: 700px; }
+      width: 700px;
+      display: block; }
       .prizes_onvertical .prizes__item {
         margin: 0 91px 52px; }
       .prizes_onvertical .prizes__item-left {
@@ -1241,6 +1254,7 @@ input:checked + .prizes__item {
     transition: transform 0.5s, -webkit-transform 0.5s; }
   @media screen and (min-width: 768px) and (max-width: 1079px) {
     .prizes_onsimple {
+      display: block;
       /*
    ██████╗██╗  ██╗███████╗ ██████╗██╗  ██╗███████╗██████╗ 
   ██╔════╝██║  ██║██╔════╝██╔════╝██║ ██╔╝██╔════╝██╔══██╗

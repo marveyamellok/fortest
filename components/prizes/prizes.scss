@@ -39,7 +39,7 @@ input[type='radio']{
 	display: inline-block;
 	vertical-align: middle;
 	width: 144px;
-	transition:  margin 0.5s;
+	transition:  margin 1s;
 	//height: 155px;
 
 	@extend .PRIZE_NAME;
@@ -234,8 +234,8 @@ input:checked + .prizes__item{
 }
 /*
 
-████████╗ █████╗ ██████╗ ██╗     ███████╗████████╗
-╚══██╔══╝██╔══██╗██╔══██╗██║     ██╔════╝╚══██╔══╝
+  ████████╗ █████╗ ██████╗ ██╗     ███████╗████████╗
+  ╚══██╔══╝██╔══██╗██╔══██╗██║     ██╔════╝╚══██╔══╝
 	 ██║   ███████║██████╔╝██║     █████╗     ██║   
 	 ██║   ██╔══██║██╔══██╗██║     ██╔══╝     ██║   
 	 ██║   ██║  ██║██████╔╝███████╗███████╗   ██║   
@@ -244,9 +244,18 @@ input:checked + .prizes__item{
 
 @include TABLET{
 
+	.prizes{
+		width: 700px;
+		display: flex;
+		flex-direction: row;
+	}
+
+	
+
 	.prizes__item{
-		margin-top: 335px;
-		margin-right: 50px;
+		//margin-top: 335px;
+		//margin-right: 50px;
+		margin: 335px auto auto;
 	}
 
 
@@ -268,7 +277,7 @@ input:checked + .prizes__item{
 
     .prizes__info{
     	opacity: 1;
-    	outline: 2px solid red;
+    	//outline: 2px solid red;
     }
 
     .prizes__info-myplace,
@@ -325,6 +334,10 @@ input:checked + .prizes__item{
 		&__text{
 			line-height: 1.5;
 		}
+	}
+
+	.name{
+		font-size: 11px;
 	}
 
 	input:checked + .prizes__item{
