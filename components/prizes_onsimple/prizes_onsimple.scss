@@ -78,6 +78,7 @@
 		    .prizes__yellow-circle,
 		    .photo-circle,
 		    .name{
+		    	transform-origin: 50% 100%;
 		      transform: scale(1.2);
 		    }
 		  }

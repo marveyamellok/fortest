@@ -8,9 +8,9 @@ input[type='radio']{
     left: -10%;
     bottom: -10%;
     right: -10%;
-    margin: auto;
-    width: auto;
-    height: auto;
+    //margin: auto;
+   // width: auto;
+    //height: auto;
     background: url(../img/mac.png) no-repeat center;
     background-size: contain;
 }
@@ -79,7 +79,7 @@ input[type='radio']{
 .photo-circle__num{
 	@extend .PHOTOS_NAME;
 	will-change: transform;
-	transition: font-size 0.5s;
+	transition: font-size 0.9s;
 	margin-top: 12px;
 
 }
@@ -88,7 +88,7 @@ input[type='radio']{
 	will-change: transform;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	transition: font-size 0.5s;
+	transition: font-size 0.9s;
 }
 
 .prizes__info{
@@ -101,7 +101,7 @@ input[type='radio']{
 
 .name{	
 	will-change: transform;
-	transition: font-size 0.5s;
+	transition: font-size 0.9s;
 }
 
 
