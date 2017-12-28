@@ -985,7 +985,6 @@ input:checked + .prizes__item {
     -webkit-transition: none;
     -o-transition: none;
     transition: none;
-    -webkit-tap-highlight-color: transparent;
     width: auto;
     height: auto; }
     .prizes_onvertical input:checked + .prizes__item .prizes__item-left {
